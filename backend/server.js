@@ -10,6 +10,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const PORT = process.env.PORT || 5000;
+
+
 // Routes
 const issuesRoute = require("./routes/issues");
 const ideasRoute = require("./routes/ideas");
@@ -44,3 +47,4 @@ const startServer = async () => {
 };
 
 startServer();
+
